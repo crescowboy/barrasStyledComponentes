@@ -13,10 +13,15 @@ const  miColor="black";
   `
 
   export const Titulo=styled.div`
+    font-size: 60px;
+    text-align: center;
+  `
+
+  export const Caja=styled.div`
     width:100px;
     height:100px;
     background-color:${({elColor})=>elColor ? elColor : "silver"};
-    margin:2px;
+    margin:8px;
     
     ${props => props.redondo &&
     css`
@@ -35,6 +40,10 @@ const  miColor="black";
   `
   export const Contenedor=styled.div`
     display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:red;
   `
   export const Moverse=styled.div`
     width: 200px;

@@ -1,19 +1,25 @@
-import { Titulo,Moverse,Sombra,Contenedor } from "./estilos";
-function App() {
+import React from "react";
+import { Titulo, Moverse, Sombra, Contenedor, Caja } from "./estilos";
+import { valores } from "./data/datos";
 
-  
+function App() {
   return (
     <>
-      <Contenedor>
-      <Titulo elColor="red" redondo>1</Titulo>
-      <Titulo elColor="yellow">2</Titulo>
-      <Titulo>3</Titulo>
-      </Contenedor>
-      <Moverse distancia={333} segundos={12}></Moverse>
-      <Moverse distancia={111} segundos={6}></Moverse>
-      <Moverse distancia={222} segundos={10}></Moverse>
-      <Moverse distancia={33} segundos={8}></Moverse>
-      <Sombra></Sombra>
+    <div>
+     <Titulo>Tus ganacias: </Titulo>
+     <Contenedor>
+      {valores.map((color,index)=>(
+        <div key={index}>
+         
+         
+            <Caja elColor={color.color}></Caja>
+            
+         
+        </div>
+
+      ))}
+       </Contenedor>
+       </div>
     </>
   );
 }
